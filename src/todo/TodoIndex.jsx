@@ -1,7 +1,7 @@
 import React, {useState, Fragment, useEffect} from 'react'
 import firebase from "./utils/firebaseConfig";
-import Todo from "./TodoLi";
-import TodoForm from "./TodoForm";
+import Todo from "./components/TodoLi";
+import TodoForm from "./components/TodoForm";
 export default function TodoIndex(){
 
     const [todos, setTodos] = useState([

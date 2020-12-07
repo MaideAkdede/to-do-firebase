@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import TodoIndex from "./TodoIndex";
+import App from "./clipo/App";
 
 ReactDOM.render(
   <React.StrictMode>
-    <TodoIndex />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

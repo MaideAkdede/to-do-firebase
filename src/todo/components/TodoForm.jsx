@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import firebase from "./utils/firebaseConfig";
+import firebase from "../../utils/firebaseConfig";
 
 function TodoForm(){
     const [valueInput, setValueInput] = useState('');
