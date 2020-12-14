@@ -5,7 +5,8 @@ import ImagePicker from "./ImagePicker";
 //649aefac73214d1443c5adc48e844668
 export default function UrlForm() {
 
-    const [videoUrl, setVideoUrl] = useState('')
+    const [videoUrl, setVideoUrl] = useState('');
+    const [idVideo, setIdVideo] = useState('');
 
     const baseUrl = 'https://api.vimeo.com/';
     const vimeoToken = '649aefac73214d1443c5adc48e844668';
@@ -16,8 +17,8 @@ export default function UrlForm() {
     })
 
     const handleLoadData = e => {
-        e.preventDefault()
-        requete.get(`/videos/481737053`).then(resp => console.log(resp.data))
+        e.preventDefault();
+        requete.get(`/videos/${idVideo}`).then(resp => console.log(resp.data));
     }
     const handleOnBlur = e => {
 
@@ -29,7 +30,7 @@ export default function UrlForm() {
        */
 
         if(videoUrl.match(/[0-9]{9}/g)) {
-            console.log(videoUrl.match(/[0-9]{9}/g)[0]);
+            setIdVideo(videoUrl.match(/[0-9]{9}/g)[0]);
         }
     }
     return (
@@ -43,8 +44,8 @@ export default function UrlForm() {
                 <button onClick={handleLoadData}>Load</button>
             </fieldset>
             <fieldset>
-                <legend>Uploader une image</legend>
-                <ImagePicker></ImagePicker>
+                <legend>Upload une image</legend>
+                <ImagePicker />
             </fieldset>
 
         </form>

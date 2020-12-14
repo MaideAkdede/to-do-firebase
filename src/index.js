@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from "./clipo/App";
+
+import App from './context/App';
 
 ReactDOM.render(
   <React.StrictMode>
